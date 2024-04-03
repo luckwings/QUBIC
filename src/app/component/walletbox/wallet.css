@@ -1,0 +1,27 @@
+.walletbox-body {
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background-color: #272b3a;
+  color: #fff;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.walletbox-footer {
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #272b3a;
+  color: #999999;
+  width: 80%;
+  right: 0;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 700;
+}
