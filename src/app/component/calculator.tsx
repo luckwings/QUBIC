@@ -23,7 +23,7 @@ export default function Calculator() {
 
         <div className="flex">
           <div className="flex rounded-t-2xl bg-[#272b3a] text-white w-[80%] p-2">
-            <div className="flex justify-center border-solid border-2 border-[#822EDA] rounded-full bg-[#100f17] text-white px-4 py-2 ml-4">
+            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white px-4 py-2 ml-4">
               ROI Calcuator
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function Calculator() {
         </div>
 
         <div className="rounded-tr-2xl rounded-b-2xl bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative text-[14px]">
-          <div className="items-center w-[100%] bg-[#100f17] border-solid border-2 border-[#822EDA] rounded-[20px] p-6">
+          <div className="items-center w-[100%] bg-[#100f17] border-solid border-2 border-[#ac5cff] rounded-[20px] p-6">
             <div className="flex justify-center mb-6 ">
               <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-2">
                 <div className="flex items-center">
@@ -93,7 +93,7 @@ export default function Calculator() {
                     <button
                       key={index}
                       className={`flex py-3 w-full rounded-full flex justify-center text-lg font-bold ${
-                        dayRange === item.value ? "bg-[#822EDA]" : ""
+                        dayRange === item.value ? "bg-[#ac5cff]" : ""
                       }`}
                       onClick={() => setDayRange(item.value)}
                     >
@@ -104,7 +104,7 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="items-center w-[100%] bg-[#272b3a] border-solid border-2 border-[#822EDA] rounded-[20px] px-4 py-2 mt-8 grid gap-2">
+            <div className="items-center w-[100%] bg-[#272b3a] border-solid border-2 border-[#ac5cff] rounded-[20px] px-4 py-2 mt-8 grid gap-2">
               <div>ROI AT CURRENT RATE</div>
               <div>$0.00</div>
               <div>0.00%</div>

@@ -14,7 +14,7 @@ export default function WalletboxBodyBallence() {
         </div>
       </div>
 
-      <div className="items-center border-solid border-2 border-[#822EDA] rounded-[40px] bg-[#100f17] px-8 py-6">
+      <div className="items-center border-solid border-2 border-[#ac5cff] rounded-[40px] bg-[#100f17] px-8 py-6">
         <div className="flex justify-between my-4">
           <p>BNB Rewards</p>
           <p className="text-[#090]">0.125</p>

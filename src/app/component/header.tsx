@@ -10,7 +10,7 @@ export default function Header() {
             alt=""
             className="h-8 mr-4"
           />
-          <div className="hidden md:flex items-center border-solid border-2 border-[#822EDA] rounded-full bg-black p-[1px]">
+          <div className="hidden md:flex items-center border-solid border-2 border-[#822eda] rounded-full bg-black p-[1px]">
             <img src="/image/qubic-logo-1.png" alt="" className="h-8 w-8" />
             <button className="mx-2 text-[#999] font-semibold">BNB Chain</button>
           </div>
@@ -35,7 +35,7 @@ export default function Header() {
           <div className="mr-4 hidden md:flex">
             <img src="/image/qubic-logo-1.png" alt="" className="h-8 w-8" />
           </div>
-          <button className="h-8 flex items-center border-solid border-2 border-[#822EDA] rounded-full bg-black px-4 text-[#999] font-semibold">
+          <button className="h-8 flex items-center border-solid border-2 border-[#822eda] rounded-full bg-black px-4 text-[#999] font-semibold">
             Connect Wallet
           </button>
         </div>

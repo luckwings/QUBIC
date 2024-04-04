@@ -73,7 +73,7 @@
 
 /* For Chrome browsers */
 .thumb::-webkit-slider-thumb {
-  background-color: #822EDA;
+  background-color: #ac5cff;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -86,7 +86,7 @@
 
 /* For Firefox browsers */
 .thumb::-moz-range-thumb {
-  background-color: #822EDA;
+  background-color: #ac5cff;
   border: none;
   border-radius: 50%;
   cursor: pointer;

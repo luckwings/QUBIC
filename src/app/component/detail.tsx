@@ -12,7 +12,7 @@ export default function Detail() {
 
         <div className="flex">
           <div className="flex rounded-t-2xl bg-[#272b3a] text-white w-[80%] pt-4 px-4 pb-2">
-            <div className="flex justify-center border-solid border-2 border-[#822EDA] rounded-full bg-[#100f17] text-white w-full px-4 ml-4">
+            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white w-full px-4 ml-4">
               Details
             </div>
           </div>
@@ -29,7 +29,7 @@ export default function Detail() {
         </div>
 
         <div className="rounded-tr-2xl rounded-b-2xl bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative">
-          <div className="grid gap-2 w-[100%] bg-[#100f17] border-solid border-2 border-[#822EDA] rounded-[20px] p-6">
+          <div className="grid gap-2 w-[100%] bg-[#100f17] border-solid border-2 border-[#ac5cff] rounded-[20px] p-6">
             <div>APY: 135%</div>
             <div>Total staked: 10,528,765 QUBIC</div>
             <div>Ends in: 87 days</div>
