@@ -14,7 +14,7 @@ import WalletboxBodyLocked from "../component/walletbox/body/walletboxBodyLocked
 import WalletboxBodyBallence from "../component/walletbox/body/walletboxBodyBallence";
 import WalletboxFooterLocked from "../component/walletbox/footer/walletboxFooterLocked";
 import WalletboxFooterBallence from "../component/walletbox/footer/walletboxFooterBallence";
-import WalletboxBodyBuy from "../component/walletbox/body/walletboxBodyBuy";
+import WalletboxBodyBuy from "../component/walletbox/body/walletboxBodyStake";
 import WalletboxFooterBuy from "../component/walletbox/footer/walletboxFooterBuy";
 
 import Calculator from "../component/calculator";
@@ -23,8 +23,10 @@ import Detail from "../component/detail";
 import { usePageStore } from "../../hooks";
 
 export default function Stake() {
-  const pageState = usePageStore((state) => state.pageState);
-  const setPageState = usePageStore((state) => state.setPageState);
+  const { pageState, setPageState } = usePageStore((state) => ({
+    pageState: state.pageState,
+    setPageState: state.setPageState,
+  }));
 
   return (
     <div className="h-screen relative text-[16px] overflow-hidden">
@@ -71,8 +73,8 @@ export default function Stake() {
                 </div>
 
                 {/* <WalletboxBodyLocked /> */}
-                <WalletboxBodyBallence />
-                {/* <WalletboxBodyBuy /> */}
+                {/* <WalletboxBodyBallence /> */}
+                <WalletboxBodyBuy />
 
                 <div className="flex relative justify-start z-10">
                   <button

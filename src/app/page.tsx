@@ -10,71 +10,67 @@ import WalletboxBodyLocked from "./component/walletbox/body/walletboxBodyLocked"
 import WalletboxBodyBallence from "./component/walletbox/body/walletboxBodyBallence";
 import WalletboxFooterLocked from "./component/walletbox/footer/walletboxFooterLocked";
 import WalletboxFooterBallence from "./component/walletbox/footer/walletboxFooterBallence";
-import WalletboxBodyBuy from "./component/walletbox/body/walletboxBodyBuy";
+import WalletboxBodyBuy from "./component/walletbox/body/walletboxBodyStake";
 import WalletboxFooterBuy from "./component/walletbox/footer/walletboxFooterBuy";
 
 export default function Home() {
   return (
-    <div className="h-screen relative text-[16px]">
+    <div id="home" className="h-screen relative text-[16px] overflow-hidden">
       <Header />
-      <main className="flex items-center bg-[#13161e] h-screen relative w-full">
-        <div className="m-auto w-full">
-          {/* when only wallet locked */}
-          {/* <div className="hidden md:flex w-[80%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
-            Stake Qubic and earn high APY rewards
-          </div> */}
-
-          <div className="flex justify-center">
-            <div className="w-full md:w-[400px] relative">
-              <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4">
-                <img src="/image/qubic-logo-1.png" alt="" className="h-8 w-8" />
-              </div>
-
-              <div className="flex absolute justify-center text-white w-[20%] bg-[#1d202c] rounded-bl-2xl pb-2 pt-8 left-0 bottom-4">
-                <div className="">Details</div>
-              </div>
-
-              <div className="flex">
-                <div className="flex justify-center rounded-t-2xl bg-[#272b3a] text-white w-[80%] p-2">
-                  {/* <WalletboxHeaderLocked /> */}
-                  <WalletboxHeaderConnected />
-                </div>
-
-                <div className="w-[20%] relative flex">
-                  {/* <div className="bg-[#1d202c] rounded-tr-2xl flex justify-center items-center w-full">
-                    <img
-                      src="/image/qubic-logo-1.png"
-                      alt=""
-                      className="h-8 w-8"
-                    />
-                  </div> */}
-                  <div
-                    id="curved-corner-bottomleft"
-                    className="absolute bottom-0"
-                  ></div>
-                </div>
-              </div>
-
-              {/* <WalletboxBodyLocked /> */}
-              <WalletboxBodyBallence />
-              {/* <WalletboxBodyBuy /> */}
-
-              <div className="flex relative justify-end z-10">
-                <div className="w-[20%] relative flex z-5">
-                  {/* <div className="bg-[#1d202c] rounded-bl-2xl left-0 flex justify-center text-white w-full">
-                    <div className="w-full flex justify-center items-center py-1">
-                      Details
+      <main className="flex items-center h-screen relative w-full">
+        <div className="m-auto w-full flex">
+          <div className="lg:w-1/2 md:py-[200px] md:px-[60px]">
+            <div className="text-6xl lg:text-7xl 2xl:text-8xl font-semibold mb-10 lg:mb-20 text-[#272b3a]">
+              <p>Qubic Staking</p>
+              <p>135% APY</p>
+            </div>
+            <div className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10 lg:mb-20 text-[#272b3a]">
+              <p>Stake QUBIC earn daily APY rewards paid in BNB</p>
+            </div>
+            <div className="flex text-[#999]">
+              <button className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8">
+                STAKE
+              </button>
+              <button className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40">
+                BUY QUBIC
+              </button>
+            </div>
+          </div>
+          <div className="lg:w-1/2 hidden lg:grid content-center">
+            <div className="pt-[100px] w-max">
+              <div className="rotate-[40deg]">
+                <div className="flex">
+                  <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max mr-[20px]">
+                    <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
+                      <Image
+                        src="/image/bnb.png"
+                        width={160}
+                        height={160}
+                        alt="bnb"
+                      />
                     </div>
-                  </div> */}
-                  <div
-                    id="curved-corner-topright"
-                    className="absolute top-0 right-0"
-                  ></div>
+                  </div>
+                  <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max">
+                    <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
+                      <Image
+                        src="/image/bnb.png"
+                        width={160}
+                        height={160}
+                        alt="bnb"
+                      />
+                    </div>
+                  </div>
                 </div>
-
-                {/* <WalletboxFooterLocked /> */}
-                <WalletboxFooterBallence />
-                {/* <WalletboxFooterBuy /> */}
+                <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max ml-[150px] -mb-[20px]">
+                  <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
+                    <Image
+                      src="/image/bnb.png"
+                      width={160}
+                      height={160}
+                      alt="bnb"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

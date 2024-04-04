@@ -1,5 +1,5 @@
 import RangeSlider from "./rangeSlider/rangeSlider";
-import { usePageStore, useDataRange } from "../../hooks";
+import { usePageStore, useDataRange, usePercent } from "../../hooks";
 import { checkBoxList } from "./dayrange";
 import Toggle from "./toggle";
 
@@ -10,12 +10,17 @@ export default function Calculator() {
     setDayRange: dayRange.setDayRange,
   }));
 
+  const { percent, setPercent } = usePercent((percent) => ({
+    percent: percent.percent,
+    setPercent: percent.setPercent,
+  }));
+
   const handleToggle = (isChecked: boolean) => {
     console.log("Toggle button is now", isChecked ? "on" : "off");
   };
 
   return (
-    <div className="flex justify-center m-auto w-full">
+    <div id="calculator" className="flex justify-center m-auto w-full">
       <div className="w-full md:w-[400px] relative">
         <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4 text-white text-2xl">
           X
@@ -59,7 +64,7 @@ export default function Calculator() {
 
             <div className="flex justify-between">
               <div className="px-1">1</div>
-              <RangeSlider min={0} max={100} type={"qubic"} />
+              <RangeSlider min={0} max={100} initial={percent} type={"percent"} page={"calculator"} />
               <div className="px-1">100%</div>
             </div>
 
@@ -77,9 +82,9 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="flex justify-between">
+            <div className="flex justify-between" id="calculator">
               <div className="px-1">3</div>
-              <RangeSlider min={2} max={365} type={"time"} />
+              <RangeSlider min={2} max={365} initial={dayRange} type={"time"} page={"calculator"} />
               <div className="px-1">365</div>
             </div>
 

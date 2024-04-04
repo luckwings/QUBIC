@@ -2,7 +2,7 @@ export default function WalletboxBodyLocked() {
   return (
     <div className="walletbox-body w-full md:w-[400px]">
       <div className="flex justify-center mb-4">
-        <div className="w-[70%] flex justify-between items-center rounded-full bg-[#111] px-4">
+        <div className="w-[70%] flex justify-between items-center rounded-full bg-[#100f17] px-4">
           <div className="text-xl font-bold">
             Stack QUBIC
             <br />

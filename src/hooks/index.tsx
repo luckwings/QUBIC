@@ -1,5 +1,7 @@
 import { create } from "zustand";
 
+// page state
+
 type State = {
   pageState: string;
 };
@@ -14,6 +16,8 @@ export const usePageStore = create<State & Action>((set) => ({
     set(() => ({ pageState: importPageState })),
 }));
 
+// staking duration
+
 type dayRange = {
   dayRange: number;
 };
@@ -23,6 +27,21 @@ type dayRangeSetting = {
 };
 
 export const useDataRange = create<dayRange & dayRangeSetting>((set) => ({
-  dayRange: 1,
+  dayRange: 7,
   setDayRange: (importDayRange) => set(() => ({ dayRange: importDayRange })),
+}));
+
+// staking percent
+
+type percent = {
+  percent: number;
+};
+
+type percentSetting = {
+  setPercent: (percent: percent["percent"]) => void;
+};
+
+export const usePercent = create<percent & percentSetting>((set) => ({
+  percent: 50,
+  setPercent: (importPercent) => set(() => ({ percent: importPercent })),
 }));

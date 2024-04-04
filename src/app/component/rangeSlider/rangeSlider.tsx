@@ -3,15 +3,29 @@
 import React, { ChangeEvent, FC, useCallback, useEffect, useState, useRef } from 'react';
 import './rangeSlider.css';
 
+import { useDataRange, usePercent } from "../../../hooks";
+
 interface rangeSliderProps {
   min: number;
   max: number;
+  initial: number;
   type: string;
+  page: string;
 }
 
-const RangeSlider: FC<rangeSliderProps> = ({ min, max, type }) => {
+const RangeSlider: FC<rangeSliderProps> = ({ min, max, initial, type, page }) => {
+  const { dayRange, setDayRange } = useDataRange((dayRange) => ({
+    dayRange: dayRange.dayRange,
+    setDayRange: dayRange.setDayRange,
+  }));
+
+  const { percent, setPercent } = usePercent((percent) => ({
+    percent: percent.percent,
+    setPercent: percent.setPercent,
+  }));
+
   const [minVal, setMinVal] = useState(min);
-  const [maxVal, setMaxVal] = useState(max);
+  const [maxVal, setMaxVal] = useState(initial);
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   const range = useRef<HTMLDivElement>(null); 
@@ -39,12 +53,20 @@ const RangeSlider: FC<rangeSliderProps> = ({ min, max, type }) => {
     if (range.current) {
       range.current.style.width = `${maxPercent - minPercent}%`;
     }
-    
-    console.log(maxVal); //current slide target value
+
+    if(type === "time") {
+      setDayRange(maxVal);
+      console.log(dayRange);
+    } if (type === "percent") {
+      setPercent(maxVal);
+      console.log(percent);
+    } else {
+      
+    }
   }, [maxVal, getPercent]);
 
   return (
-    <div className="container">
+    <div className="slide_container">
         <input
           type="range"
           min={0}
@@ -55,12 +77,12 @@ const RangeSlider: FC<rangeSliderProps> = ({ min, max, type }) => {
             setMaxVal(value);
             maxValRef.current = value;
           }}
-          className="thumb thumb--right"
+          className={`${page === "calculator" ? "thumb_cal thumb--right_cal" : "thumb_stake thumb--right_stake"}`}
         />
 
         <div className="slider">
-          <div className="slider__track"></div>
-          <div ref={range} className="slider__range"></div>
+          <div className={`${page === "calculator" ? "slider__track_cal" : "slider__track_stake"}`}></div>
+          <div ref={range} className={`${page === "calculator" ? "slider__range_cal" : "slider__range_stake"}`}></div>
           {/* <div className="slider__left-value">{minVal}</div>
           <div className="slider__right-value">{maxVal}</div> */}
         </div>
