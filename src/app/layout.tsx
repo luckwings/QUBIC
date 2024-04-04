@@ -18,7 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        {/* <div className="h-screen bg-black">1</div> */}
       </body>
     </html>
   );

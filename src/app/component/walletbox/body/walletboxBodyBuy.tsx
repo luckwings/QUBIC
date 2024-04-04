@@ -23,7 +23,7 @@ export default function WalletboxBodyBuy() {
 
       <div className="flex justify-between">
         <div className="px-4">1</div>
-        <RangeSlider min={0} max={100} />
+        <RangeSlider min={0} max={100} type="null" />
         <div className="px-4">100%</div>
       </div>
 
@@ -38,7 +38,7 @@ export default function WalletboxBodyBuy() {
       </div>
       <div className="flex justify-between">
         <div className="px-4">3</div>
-        <RangeSlider min={2} max={365} />
+        <RangeSlider min={2} max={365} type="null" />
         <div className="px-4">365</div>
       </div>
 

@@ -6,9 +6,10 @@ import './rangeSlider.css';
 interface rangeSliderProps {
   min: number;
   max: number;
+  type: string;
 }
 
-const RangeSlider: FC<rangeSliderProps> = ({ min, max }) => {
+const RangeSlider: FC<rangeSliderProps> = ({ min, max, type }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);

@@ -1,6 +1,6 @@
 .walletbox-body {
-  border-top-right-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   background-color: #272b3a;
   color: #fff;
   width: 100%;
@@ -18,7 +18,7 @@
   border-bottom-right-radius: 1rem;
   background-color: #272b3a;
   color: #999999;
-  width: 80%;
+  width: 85%;
   right: 0;
   padding-bottom: 1rem;
   padding-left: 1rem;
