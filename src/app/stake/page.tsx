@@ -14,18 +14,23 @@ import WalletboxBodyLocked from "../component/walletbox/body/walletboxBodyLocked
 import WalletboxBodyBallence from "../component/walletbox/body/walletboxBodyBallence";
 import WalletboxFooterLocked from "../component/walletbox/footer/walletboxFooterLocked";
 import WalletboxFooterBallence from "../component/walletbox/footer/walletboxFooterBallence";
-import WalletboxBodyBuy from "../component/walletbox/body/walletboxBodyStake";
-import WalletboxFooterBuy from "../component/walletbox/footer/walletboxFooterBuy";
+import WalletboxBodyStake from "../component/walletbox/body/walletboxBodyStake";
+import WalletboxFooterStake from "../component/walletbox/footer/walletboxFooterStake";
 
 import Calculator from "../component/calculator";
 import Detail from "../component/detail";
 
-import { usePageStore } from "../../hooks";
+import { usePageStore, useWalletStore } from "../../hooks";
 
 export default function Stake() {
   const { pageState, setPageState } = usePageStore((state) => ({
     pageState: state.pageState,
     setPageState: state.setPageState,
+  }));
+
+  const { walletState, setWalletState } = useWalletStore((wallet) => ({
+    walletState: wallet.walletState,
+    setWalletState: wallet.setWalletState,
   }));
 
   return (
@@ -57,8 +62,11 @@ export default function Stake() {
 
                 <div className="flex">
                   <div className="flex justify-center rounded-t-2xl bg-[#272b3a] w-[85%] text-white pt-4">
-                    {/* <WalletboxHeaderLocked /> */}
-                    <WalletboxHeaderConnected />
+                    {walletState === "disConnected" ? (
+                      <WalletboxHeaderConnected />
+                    ) : (
+                      <WalletboxHeaderLocked />
+                    )}
                   </div>
 
                   <button
@@ -72,9 +80,13 @@ export default function Stake() {
                   </button>
                 </div>
 
-                {/* <WalletboxBodyLocked /> */}
-                {/* <WalletboxBodyBallence /> */}
-                <WalletboxBodyBuy />
+                {walletState === "disConnected" ? (
+                  <WalletboxBodyLocked />
+                ) : pageState === "stake" ? (
+                  <WalletboxBodyStake />
+                ) : (
+                  walletState === "balance" && <WalletboxBodyBallence />
+                )}
 
                 <div className="flex relative justify-start z-10">
                   <button
@@ -87,9 +99,13 @@ export default function Stake() {
                     ></div>
                   </button>
 
-                  {/* <WalletboxFooterLocked /> */}
-                  <WalletboxFooterBallence />
-                  {/* <WalletboxFooterBuy /> */}
+                  {walletState === "disConnected" ? (
+                    <WalletboxFooterLocked />
+                  ) : pageState === "stake" ? (
+                    <WalletboxFooterStake />
+                  ) : (
+                    walletState === "balance" && <WalletboxFooterBallence />
+                  )}
                 </div>
               </div>
             </div>

@@ -16,6 +16,22 @@ export const usePageStore = create<State & Action>((set) => ({
     set(() => ({ pageState: importPageState })),
 }));
 
+// wallet connect state
+
+type walletState = {
+  walletState: string;
+};
+
+type walletAction = {
+  setWalletState: (walletState: walletState["walletState"]) => void;
+};
+
+export const useWalletStore = create<walletState & walletAction>((set) => ({
+  walletState: "disConnected",
+  setWalletState: (importWalletState) =>
+    set(() => ({ walletState: importWalletState })),
+}));
+
 // staking duration
 
 type dayRange = {

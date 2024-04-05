@@ -10,8 +10,8 @@ import WalletboxBodyLocked from "./component/walletbox/body/walletboxBodyLocked"
 import WalletboxBodyBallence from "./component/walletbox/body/walletboxBodyBallence";
 import WalletboxFooterLocked from "./component/walletbox/footer/walletboxFooterLocked";
 import WalletboxFooterBallence from "./component/walletbox/footer/walletboxFooterBallence";
-import WalletboxBodyBuy from "./component/walletbox/body/walletboxBodyStake";
-import WalletboxFooterBuy from "./component/walletbox/footer/walletboxFooterBuy";
+import WalletboxBodyStake from "./component/walletbox/body/walletboxBodyStake";
+import WalletboxFooterStake from "./component/walletbox/footer/walletboxFooterStake";
 
 export default function Home() {
   return (
