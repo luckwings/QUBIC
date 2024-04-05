@@ -50,10 +50,10 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max">
-                    <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
+                  <div className="border-solid border-4 border-[#822eda] rounded-full p-4 w-max">
+                    <div className="border-solid border-[40px] border-[#27283a] rounded-full -rotate-[40deg]">
                       <Image
-                        src="/image/bnb.png"
+                        src="/image/qubic-logo-1.png"
                         width={160}
                         height={160}
                         alt="bnb"
@@ -61,8 +61,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max ml-[150px] -mb-[20px]">
-                  <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
+                <div className="border-solid border-4 border-[#157b00] rounded-full w-max ml-[150px] -mt-[20px]">
+                  <div className="bg-[#27283a] p-[60px] rounded-full -rotate-[40deg]">
                     <Image
                       src="/image/bnb.png"
                       width={160}
