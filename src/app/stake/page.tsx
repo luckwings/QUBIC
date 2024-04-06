@@ -63,9 +63,9 @@ export default function Stake() {
                 <div className="flex">
                   <div className="flex justify-center rounded-t-2xl bg-[#272b3a] w-[85%] text-white pt-4">
                     {walletState === "disConnected" ? (
-                      <WalletboxHeaderConnected />
-                    ) : (
                       <WalletboxHeaderLocked />
+                    ) : (
+                      <WalletboxHeaderConnected />
                     )}
                   </div>
 

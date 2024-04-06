@@ -24,7 +24,7 @@ export default function WalletboxBodyLocked() {
       </div>
 
       <div className="flex justify-center items-center w-[100%] bg-[#100f17] rounded-xl py-10">
-        <img src="/image/lock.png" alt="" className="h-[200px] w-[40%]" />
+        <img src="/image/lock.png" alt="" className="h-[160px] w-[40%]" />
       </div>
     </div>
   );
