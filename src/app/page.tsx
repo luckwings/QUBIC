@@ -4,14 +4,6 @@ import "./component/walletbox/wallet.css";
 import Header from "./component/layout/header";
 import Footer from "./component/layout/footer";
 import MobileButton from "./component/layout/mobileButton";
-import WalletboxHeaderLocked from "./component/walletbox/header/walletboxHeaderLocked";
-import WalletboxHeaderConnected from "./component/walletbox/header/walletboxHeaderConnected";
-import WalletboxBodyLocked from "./component/walletbox/body/walletboxBodyLocked";
-import WalletboxBodyBallence from "./component/walletbox/body/walletboxBodyBallence";
-import WalletboxFooterLocked from "./component/walletbox/footer/walletboxFooterLocked";
-import WalletboxFooterBallence from "./component/walletbox/footer/walletboxFooterBallence";
-import WalletboxBodyStake from "./component/walletbox/body/walletboxBodyStake";
-import WalletboxFooterStake from "./component/walletbox/footer/walletboxFooterStake";
 
 export default function Home() {
   return (
@@ -28,17 +20,23 @@ export default function Home() {
               <p>Stake QUBIC earn daily APY rewards paid in BNB</p>
             </div>
             <div className="flex text-[#999]">
-              <a href="./stake" className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8">
+              <a
+                href="./stake"
+                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8"
+              >
                 STAKE
               </a>
-              <a href="./" className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40">
+              <a
+                href="./"
+                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40"
+              >
                 BUY QUBIC
               </a>
             </div>
           </div>
           <div className="lg:w-1/2 hidden lg:grid content-center">
-            <div className="pt-[100px] w-max">
-              <div className="rotate-[40deg]">
+            <div className="w-max m-auto">
+              {/* <div className="rotate-[40deg]">
                 <div className="flex">
                   <div className="border-solid border-4 border-[#000] rounded-full p-4 w-max mr-[20px]">
                     <div className="border-solid border-[40px] border-[#822eda] rounded-full -rotate-[40deg]">
@@ -71,7 +69,8 @@ export default function Home() {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <Image src="/image/homepage_image.png" width={600} height={600} alt="bnb" />
             </div>
           </div>
         </div>

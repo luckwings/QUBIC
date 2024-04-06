@@ -56,10 +56,10 @@ const RangeSlider: FC<rangeSliderProps> = ({ min, max, initial, type, page }) =>
 
     if(type === "time") {
       setDayRange(maxVal);
-      console.log(dayRange);
+      // console.log(dayRange);
     } if (type === "percent") {
       setPercent(maxVal);
-      console.log(percent);
+      // console.log(percent);
     } else {
       
     }

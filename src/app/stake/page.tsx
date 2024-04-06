@@ -40,7 +40,7 @@ export default function Stake() {
         {pageState === "stake" ? (
           <div className="m-auto w-full">
             {/* when only wallet locked */}
-            <div className="hidden md:flex w-[80%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
+            <div className="hidden md:flex w-[85%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
               Stake Qubic and earn high APY rewards
             </div>
 
@@ -48,7 +48,7 @@ export default function Stake() {
 
             <div className="flex justify-center">
               <div className="w-full md:w-[400px] relative">
-                <div className="flex absolute justify-center w-[15%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4">
+                <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4">
                   <img
                     src="/image/qubic-logo-1.png"
                     alt=""
@@ -56,12 +56,12 @@ export default function Stake() {
                   />
                 </div>
 
-                <div className="flex absolute justify-center text-white w-[15%] bg-[#1d202c] rounded-bl-2xl pb-2 pt-8 left-0 bottom-4">
+                <div className="flex absolute justify-center text-white w-[20%] bg-[#1d202c] rounded-bl-2xl pb-2 pt-8 left-0 bottom-4">
                   <div className="">Details</div>
                 </div>
 
                 <div className="flex">
-                  <div className="flex justify-center rounded-t-2xl bg-[#272b3a] w-[85%] text-white pt-4">
+                  <div className="flex justify-center rounded-t-2xl bg-[#272b3a] w-[80%] text-white pt-4">
                     {walletState === "disConnected" ? (
                       <WalletboxHeaderLocked />
                     ) : (
@@ -70,7 +70,7 @@ export default function Stake() {
                   </div>
 
                   <button
-                    className="w-[15%] relative flex"
+                    className="w-[20%] relative flex"
                     onClick={() => setPageState("calculate")}
                   >
                     <div
@@ -90,7 +90,7 @@ export default function Stake() {
 
                 <div className="flex relative justify-start z-10">
                   <button
-                    className="w-[15%] relative flex z-5"
+                    className="w-[20%] relative flex z-5"
                     onClick={() => setPageState("detail")}
                   >
                     <div

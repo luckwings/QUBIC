@@ -1,7 +1,7 @@
 import RangeSlider from "../../rangeSlider/rangeSlider";
 import { useDataRange, usePercent } from "@/hooks";
 
-export default function walletboxBodyStake() {
+export default function WalletboxBodyStake() {
   const { dayRange, setDayRange } = useDataRange((dayRange) => ({
     dayRange: dayRange.dayRange,
     setDayRange: dayRange.setDayRange,
