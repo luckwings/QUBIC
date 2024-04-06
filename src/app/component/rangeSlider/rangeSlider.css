@@ -162,7 +162,8 @@
 }
 
 .thumb_cal::-webkit-slider-thumb {
-  background-color: #00f;
+  /* background-color: #00f; */
+  background-color: #ac5cff;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -199,7 +200,8 @@
 }
 
 .thumb_cal::-moz-range-thumb {
-  background-color: #00f;
+  /* background-color: #00f; */
+  background-color: #ac5cff;
   border: none;
   border-radius: 50%;
   cursor: pointer;

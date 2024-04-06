@@ -1,9 +1,9 @@
 import Image from "next/image";
 import "./component/walletbox/wallet.css";
 
-import Header from "./component/header";
-import Footer from "./component/footer";
-import MobileButton from "./component/mobileButton";
+import Header from "./component/layout/header";
+import Footer from "./component/layout/footer";
+import MobileButton from "./component/layout/mobileButton";
 import WalletboxHeaderLocked from "./component/walletbox/header/walletboxHeaderLocked";
 import WalletboxHeaderConnected from "./component/walletbox/header/walletboxHeaderConnected";
 import WalletboxBodyLocked from "./component/walletbox/body/walletboxBodyLocked";
@@ -28,12 +28,12 @@ export default function Home() {
               <p>Stake QUBIC earn daily APY rewards paid in BNB</p>
             </div>
             <div className="flex text-[#999]">
-              <button className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8">
+              <a href="./stake" className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8">
                 STAKE
-              </button>
-              <button className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40">
+              </a>
+              <a href="./" className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40">
                 BUY QUBIC
-              </button>
+              </a>
             </div>
           </div>
           <div className="lg:w-1/2 hidden lg:grid content-center">

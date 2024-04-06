@@ -1,5 +1,5 @@
 import RangeSlider from "../../rangeSlider/rangeSlider";
-import { useDataRange, usePercent } from "../../../../hooks";
+import { useDataRange, usePercent } from "@/hooks";
 
 export default function walletboxBodyStake() {
   const { dayRange, setDayRange } = useDataRange((dayRange) => ({

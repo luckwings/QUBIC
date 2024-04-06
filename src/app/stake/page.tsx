@@ -5,9 +5,9 @@ import Image from "next/image";
 
 import "../component/walletbox/wallet.css";
 
-import Header from "../component/header";
-import Footer from "../component/footer";
-import MobileButton from "../component/mobileButton";
+import Header from "../component/layout/header";
+import Footer from "../component/layout/footer";
+import MobileButton from "../component/layout/mobileButton";
 import WalletboxHeaderLocked from "../component/walletbox/header/walletboxHeaderLocked";
 import WalletboxHeaderConnected from "../component/walletbox/header/walletboxHeaderConnected";
 import WalletboxBodyLocked from "../component/walletbox/body/walletboxBodyLocked";
@@ -20,7 +20,7 @@ import WalletboxFooterStake from "../component/walletbox/footer/walletboxFooterS
 import Calculator from "../component/calculator";
 import Detail from "../component/detail";
 
-import { usePageStore, useWalletStore } from "../../hooks";
+import { usePageStore, useWalletStore } from "@/hooks";
 
 export default function Stake() {
   const { pageState, setPageState } = usePageStore((state) => ({

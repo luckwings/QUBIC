@@ -3,7 +3,7 @@
 import React, { ChangeEvent, FC, useCallback, useEffect, useState, useRef } from 'react';
 import './rangeSlider.css';
 
-import { useDataRange, usePercent } from "../../../hooks";
+import { useDataRange, usePercent } from "@/hooks";
 
 interface rangeSliderProps {
   min: number;

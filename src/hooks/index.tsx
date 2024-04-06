@@ -43,7 +43,7 @@ type dayRangeSetting = {
 };
 
 export const useDataRange = create<dayRange & dayRangeSetting>((set) => ({
-  dayRange: 7,
+  dayRange: 30,
   setDayRange: (importDayRange) => set(() => ({ dayRange: importDayRange })),
 }));
 

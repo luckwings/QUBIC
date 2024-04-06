@@ -1,7 +1,8 @@
 import RangeSlider from "./rangeSlider/rangeSlider";
-import { usePageStore, useDataRange, usePercent } from "../../hooks";
+import { usePageStore, useDataRange, usePercent } from "@/hooks";
 import { checkBoxList } from "./dayrange";
-import Toggle from "./toggle";
+import Toggle from "./gadget/toggle";
+import { useState, useEffect } from "react";
 
 export default function Calculator() {
   const setPageState = usePageStore((state) => state.setPageState);
@@ -10,13 +11,16 @@ export default function Calculator() {
     setDayRange: dayRange.setDayRange,
   }));
 
+  const [toggleState, setToggleState] = useState(false);
+
   const { percent, setPercent } = usePercent((percent) => ({
     percent: percent.percent,
     setPercent: percent.setPercent,
   }));
 
   const handleToggle = (isChecked: boolean) => {
-    console.log("Toggle button is now", isChecked ? "on" : "off");
+    isChecked ? setToggleState(false) : setToggleState(true);
+    console.log(toggleState);
   };
 
   return (
@@ -78,7 +82,7 @@ export default function Calculator() {
                   />
                   <div className="pl-2">Stake for</div>
                 </div>
-                <div className="items-end mr-10">Days 250</div>
+                <div className="items-end mr-10">Days {dayRange}</div>
               </div>
             </div>
 

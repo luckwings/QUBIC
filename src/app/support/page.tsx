@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import Header from "../component/header";
-import Footer from "../component/footer";
-import MobileButton from "../component/mobileButton";
+import Header from "../component/layout/header";
+import Footer from "../component/layout/footer";
+import MobileButton from "../component/layout/mobileButton";
 
 export default function Support() {
   return (

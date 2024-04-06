@@ -1,4 +1,4 @@
-import { usePageStore } from "../../hooks";
+import { usePageStore } from "@/hooks";
 
 export default function Detail() {
   const setPageState = usePageStore((state) => state.setPageState);
