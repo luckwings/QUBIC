@@ -26,9 +26,9 @@ export default function ConnectButton({ isSmall }: ConnectButtonProps) {
     }
     if (address) {
       const strLength = address.length;
-      const targetS = strLength - 7;
+      const targetS = strLength - 5;
       const targetE = strLength - 1;
-      const headline = address.substring(0, 7);
+      const headline = address.substring(0, 4);
       const endline = address.substring(targetS, targetE);
       let newAddress = headline + "..." + endline;
       return <div>{newAddress}</div>;
