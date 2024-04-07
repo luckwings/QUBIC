@@ -34,21 +34,23 @@ export default function Stake() {
   }));
 
   return (
-    <div className="h-screen relative text-[16px] overflow-hidden">
+    <div className="h-screen relative overflow-hidden">
       <Header />
       <main className="flex items-center bg-[#13161e] h-screen relative w-full">
         {pageState === "stake" ? (
           <div className="m-auto w-full">
             {/* when only wallet locked */}
-            <div className="hidden md:flex w-[85%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
-              Stake Qubic and earn high APY rewards
-            </div>
-
-            {/* <Calculator /> */}
+            {walletState === "disConnected" ? (
+              <div className="hidden md:flex w-[85%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
+                Stake Qubic and earn high APY rewards
+              </div>
+            ) : (
+              <></>
+            )}
 
             <div className="flex justify-center">
               <div className="w-full md:w-[400px] relative">
-                <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4">
+                <div className="flex absolute pl-[40px] w-[25%] bg-[#1d202c] rounded-tr-[2rem] pt-2 pb-8 right-0 top-4">
                   <img
                     src="/image/qubic-logo-1.png"
                     alt=""
@@ -56,12 +58,12 @@ export default function Stake() {
                   />
                 </div>
 
-                <div className="flex absolute justify-center text-white w-[20%] bg-[#1d202c] rounded-bl-2xl pb-2 pt-8 left-0 bottom-4">
+                <div className="flex absolute pl-[15px] text-white w-[25%] bg-[#1d202c] rounded-bl-[2rem] pb-2 pt-8 left-0 bottom-4">
                   <div className="">Details</div>
                 </div>
 
                 <div className="flex">
-                  <div className="flex justify-center rounded-t-2xl bg-[#272b3a] w-[80%] text-white pt-4">
+                  <div className="flex justify-center rounded-t-[2rem] bg-[#272b3a] w-[80%] text-white pt-4 z-10">
                     {walletState === "disConnected" ? (
                       <WalletboxHeaderLocked />
                     ) : (

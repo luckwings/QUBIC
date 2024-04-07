@@ -13,7 +13,7 @@ export default function WalletboxBodyStake() {
   }));
 
   return (
-    <div id="stake" className="walletbox-body w-full md:w-[400px]">
+    <div id="stake" className="walletbox-body p-[20px] pt-[30px] w-full md:w-[400px]">
       <div className="flex justify-center mb-6 ">
         <div className="w-full flex justify-between items-center rounded-full bg-[#100f17] p-2">
           <div className="flex items-center">
@@ -32,7 +32,7 @@ export default function WalletboxBodyStake() {
         </div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between w-[90%] ml-[5%]">
         <div className="px-4">1</div>
         <RangeSlider min={0} max={100} initial={percent} type="percent" page={"stake"} />
         <div className="px-4">100%</div>
@@ -47,13 +47,14 @@ export default function WalletboxBodyStake() {
           <div className="items-end mr-10">{dayRange}</div>
         </div>
       </div>
-      <div className="flex justify-between">
+      
+      <div className="flex justify-between w-[90%] ml-[5%]">
         <div className="px-4">3</div>
         <RangeSlider min={2} max={365} initial={dayRange} type="time" page={"stake"} />
         <div className="px-4">365</div>
       </div>
 
-      <div className="w-full flex justify-center items-center rounded-full bg-[#100f17] p-1 mt-8">
+      <div className="w-[90%] flex justify-center items-center rounded-full bg-[#100f17] p-1 ml-[5%] mt-6">
         <div>Annual ROI at current rate: </div>
         <div className="pl-4">$10</div>
       </div>

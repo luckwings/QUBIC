@@ -1,8 +1,8 @@
 export default function WalletboxBodyBallence() {
   return (
-    <div className="walletbox-body w-full md:w-[400px]">
+    <div className="walletbox-body px-[20px] py-[30px] w-full md:w-[400px]">
       <div className="flex justify-center mb-8">
-        <div className="w-[80%] flex justify-between items-center rounded-full bg-[#100f17] px-4">
+        <div className="w-[80%] flex justify-between items-center rounded-full bg-[#100f17] pl-6 pr-4">
           <div className="text-xl font-bold">Your Rewards</div>
           <div className="flex relative -mr-4 items-center">
             <img

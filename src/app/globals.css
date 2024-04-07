@@ -36,15 +36,6 @@ main {
   }
 }
 
-.oval-header {
-  width: 100%;
-  height: 100px;
-  background: #272b3a;
-  border-radius: 100% / 100px;
-  position: absolute;
-  z-index: 5;
-}
-
 .oval {
   width: 150px;
   height: 80px;
@@ -53,8 +44,18 @@ main {
   position: absolute;
 }
 
+.oval-header {
+  width: 105%;
+  height: 80px;
+  background: #272b3a;
+  border-radius: 100% / 100px;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 5;
+}
+
 .oval-footer {
-  width: 100%;
+  width: 90%;
   height: 120px;
   background: #272b3a;
   border-radius: 100% / 120px;

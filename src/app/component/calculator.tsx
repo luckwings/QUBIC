@@ -26,13 +26,13 @@ export default function Calculator() {
   return (
     <div id="calculator" className="flex justify-center m-auto w-full">
       <div className="w-full md:w-[400px] relative">
-        <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-2xl pt-2 pb-8 right-0 top-4 text-white text-2xl">
+        <div className="flex absolute justify-center w-[20%] bg-[#1d202c] rounded-tr-3xl pt-2 pb-8 right-0 top-4 text-white text-xl">
           X
         </div>
 
         <div className="flex">
-          <div className="flex rounded-t-2xl bg-[#272b3a] text-white w-[80%] p-2">
-            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white px-4 py-2 ml-4">
+          <div className="flex rounded-t-2xl bg-[#272b3a] text-white w-[80%] px-2 pt-4 pb-1">
+            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white text-xl px-2 py-0 ml-4">
               ROI Calcuator
             </div>
           </div>
@@ -48,9 +48,9 @@ export default function Calculator() {
           </button>
         </div>
 
-        <div className="rounded-tr-2xl rounded-b-2xl bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative text-[14px]">
-          <div className="items-center w-[100%] bg-[#100f17] border-solid border-2 border-[#ac5cff] rounded-[20px] p-6">
-            <div className="flex justify-center mb-6 ">
+        <div className="rounded-tr-[40px] rounded-b-[40px] bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative text-[14px]">
+          <div className="items-center w-[100%] bg-[#100f17] border-solid border-2 border-[#ac5cff] rounded-[30px] p-4">
+            <div className="flex justify-center mb-4 ">
               <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-2">
                 <div className="flex items-center">
                   <img
@@ -66,13 +66,13 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="flex justify-between">
-              <div className="px-1">1</div>
+            <div className="flex justify-around w-[90%] ml-[5%]">
+              <div className="px-1"> 1 </div>
               <RangeSlider min={0} max={100} initial={percent} type={"percent"} page={"calculator"} />
               <div className="px-1">100%</div>
             </div>
 
-            <div className="flex justify-center mb-6 mt-8">
+            <div className="flex justify-center mb-4 mt-10">
               <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-2">
                 <div className="flex items-center">
                   <img
@@ -86,8 +86,8 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="flex justify-between" id="calculator">
-              <div className="px-1">3</div>
+            <div className="flex justify-around w-[90%] ml-[5%]" id="calculator">
+              <div className="px-1"> 3 </div>
               <RangeSlider min={2} max={365} initial={dayRange} type={"time"} page={"calculator"} />
               <div className="px-1">365</div>
             </div>
