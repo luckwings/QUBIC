@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex items-center h-screen relative w-full">
         <div className="m-auto w-full flex">
-          <div className="lg:w-1/2 md:py-[200px] md:px-[60px]">
+          <div className="lg:w-1/2 md:py-[200px] md:px-[60px] lg:px-[150px]">
             <div className="text-6xl lg:text-7xl 2xl:text-8xl font-semibold mb-10 lg:mb-20 text-[#272b3a]">
               <p>Qubic Staking</p>
               <p>135% APY</p>
