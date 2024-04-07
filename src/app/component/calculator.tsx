@@ -31,8 +31,8 @@ export default function Calculator() {
         </div>
 
         <div className="flex">
-          <div className="flex rounded-t-2xl bg-[#272b3a] text-white w-[80%] px-2 pt-4 pb-1">
-            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white text-xl px-2 py-0 ml-4">
+          <div className="flex rounded-t-3xl bg-[#272b3a] text-white w-[80%] px-2 pt-4 pb-1">
+            <div className="flex justify-center border-solid border-2 border-[#ac5cff] rounded-full bg-[#100f17] text-white text-xl px-3 py-0 ml-4">
               ROI Calcuator
             </div>
           </div>
@@ -48,47 +48,58 @@ export default function Calculator() {
           </button>
         </div>
 
-        <div className="rounded-tr-[40px] rounded-b-[40px] bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative text-[14px]">
+        <div className="rounded-tr-3xl rounded-b-[40px] bg-[#272b3a] text-white w-full md:w-[400px] p-4 relative">
           <div className="items-center w-[100%] bg-[#100f17] border-solid border-2 border-[#ac5cff] rounded-[30px] p-4">
-            <div className="flex justify-center mb-4 ">
-              <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-2">
-                <div className="flex items-center">
-                  <img
-                    src="/image/qubic-logo-1.png"
-                    alt=""
-                    className="h-12 w-12"
-                  />
-                  <div className="pl-2">
-                    <div>Stake Qubic 0.0000000</div>
-                    <div>$0</div>
-                  </div>
+            <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-4 mb-4">
+              <div className="flex items-center">
+                <img
+                  src="/image/qubic-logo-1.png"
+                  alt=""
+                  className="h-12 w-12"
+                />
+                <div className="pl-2">
+                  <div>Stake Qubic 0.0000000</div>
+                  <div>$0</div>
                 </div>
               </div>
             </div>
 
             <div className="flex justify-around w-[90%] ml-[5%]">
               <div className="px-1"> 1 </div>
-              <RangeSlider min={0} max={100} initial={percent} type={"percent"} page={"calculator"} />
+              <RangeSlider
+                min={0}
+                max={100}
+                initial={percent}
+                type={"percent"}
+                page={"calculator"}
+              />
               <div className="px-1">100%</div>
             </div>
 
-            <div className="flex justify-center mb-4 mt-10">
-              <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-2">
-                <div className="flex items-center">
-                  <img
-                    src="/image/qubic-logo-1.png"
-                    alt=""
-                    className="h-12 w-12"
-                  />
-                  <div className="pl-2">Stake for</div>
-                </div>
-                <div className="items-end mr-10">Days {dayRange}</div>
+            <div className="w-full flex justify-between items-center rounded-full bg-[#272b3a] p-4 mb-4 mt-10">
+              <div className="flex items-center">
+                <img
+                  src="/image/qubic-logo-1.png"
+                  alt=""
+                  className="h-12 w-12"
+                />
+                <div className="pl-2">Stake for</div>
               </div>
+              <div className="items-end mr-2">Days {dayRange}</div>
             </div>
 
-            <div className="flex justify-around w-[90%] ml-[5%]" id="calculator">
+            <div
+              className="flex justify-around w-[90%] ml-[5%]"
+              id="calculator"
+            >
               <div className="px-1"> 3 </div>
-              <RangeSlider min={2} max={365} initial={dayRange} type={"time"} page={"calculator"} />
+              <RangeSlider
+                min={2}
+                max={365}
+                initial={dayRange}
+                type={"time"}
+                page={"calculator"}
+              />
               <div className="px-1">365</div>
             </div>
 
@@ -113,7 +124,7 @@ export default function Calculator() {
               </div>
             </div>
 
-            <div className="items-center w-[100%] bg-[#272b3a] border-solid border-2 border-[#ac5cff] rounded-[20px] px-4 py-2 mt-8 grid gap-2">
+            <div className="items-center w-[100%] bg-[#272b3a] border-solid border-2 border-[#ac5cff] rounded-xl px-4 py-2 mt-8 grid gap-2">
               <div>ROI AT CURRENT RATE</div>
               <div>$0.00</div>
               <div>0.00%</div>

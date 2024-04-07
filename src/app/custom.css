@@ -49,3 +49,39 @@
   height: 200px;
   background-size: 200px;
 }
+
+.line-initial {
+  line-height: initial;
+}
+
+.oval {
+  width: 150px;
+  height: 80px;
+  background: #272b3a;
+  border-radius: 150px / 75px;
+  position: absolute;
+}
+
+.oval-header {
+  width: 105%;
+  height: 80px;
+  background: #272b3a;
+  border-radius: 100% / 100px;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 5;
+}
+
+.oval-footer {
+  width: 90%;
+  height: 120px;
+  background: #272b3a;
+  border-radius: 100% / 120px;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .oval-header {
+    display: none;
+  }
+}

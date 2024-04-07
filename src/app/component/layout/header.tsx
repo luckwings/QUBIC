@@ -8,11 +8,11 @@ export default function Header() {
           <img
             src="/image/qubic-project-logo.png"
             alt=""
-            className="h-8 mr-4"
+            className="h-10 mr-8"
           />
           <div className="hidden lg:flex items-center border-solid border-2 border-[#822eda] rounded-full bg-black p-[1px]">
-            <img src="/image/qubic-logo-1.png" alt="" className="h-8 w-8" />
-            <button className="mx-2 text-[#999] font-semibold">
+            <img src="/image/bnb.png" alt="" className="h-8" />
+            <button className="mx-2 text-lg text-[#999] font-semibold">
               BNB Chain
             </button>
           </div>

@@ -41,7 +41,7 @@ export default function Stake() {
           <div className="m-auto w-full">
             {/* when only wallet locked */}
             {walletState === "disConnected" ? (
-              <div className="hidden md:flex w-[85%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-10 text-3xl">
+              <div className="hidden md:flex w-[95%] mx-auto justify-center rounded-full bg-[#272b3a] text-white p-6 mb-20 text-3xl">
                 Stake Qubic and earn high APY rewards
               </div>
             ) : (
@@ -63,13 +63,11 @@ export default function Stake() {
                 </div>
 
                 <div className="flex">
-                  <div className="flex justify-center rounded-t-[2rem] bg-[#272b3a] w-[80%] text-white pt-4 z-10">
-                    {walletState === "disConnected" ? (
-                      <WalletboxHeaderLocked />
-                    ) : (
-                      <WalletboxHeaderConnected />
-                    )}
-                  </div>
+                  {walletState === "disConnected" ? (
+                    <WalletboxHeaderLocked />
+                  ) : (
+                    <WalletboxHeaderConnected />
+                  )}
 
                   <button
                     className="w-[20%] relative flex"

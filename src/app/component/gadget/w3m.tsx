@@ -49,8 +49,8 @@ export default function ConnectButton({ isSmall }: ConnectButtonProps) {
   return (
     <button
       className={`${
-        isSmall ? "" : "w-full flex justify-center"
-      } flex h-8 items-center border-solid border-2 border-[#822eda] rounded-full bg-black py-4 px-2 text-[#999] font-semibold`}
+        isSmall ? "py-5" : "w-full flex justify-center py-4"
+      } flex h-8 items-center border-solid border-2 border-[#822eda] rounded-full bg-black px-4 text-[#999] font-semibold`}
       onClick={() => open()}
     >
       {ButtonLabel()}

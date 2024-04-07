@@ -7,7 +7,7 @@ import MobileButton from "./component/layout/mobileButton";
 
 export default function Home() {
   return (
-    <div id="home" className="h-screen relative text-[16px] overflow-hidden">
+    <div id="home" className="h-screen relative overflow-hidden">
       <Header />
       <main className="flex items-center h-screen relative w-full">
         <div className="m-auto w-full flex">
@@ -16,19 +16,19 @@ export default function Home() {
               <p>Qubic Staking</p>
               <p>135% APY</p>
             </div>
-            <div className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10 lg:mb-20 text-[#272b3a]">
-              <p>Stake QUBIC earn daily APY rewards paid in BNB</p>
+            <div className="text-3xl lg:text-4xl 2xl:text-5xl font-bold mb-10 lg:mb-20 text-[#272b3a] line-initial">
+              Stake QUBIC earn daily APY rewards paid in BNB
             </div>
             <div className="flex text-[#999]">
               <a
                 href="./stake"
-                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40 mr-8"
+                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full text-[20px] font-bold bg-black py-2 w-[200px] mr-8"
               >
                 STAKE
               </a>
               <a
                 href="./"
-                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full bg-black py-1 w-40"
+                className="flex justify-center items-center border-solid border-2 border-[#ac5cff] rounded-full text-[20px] font-bold bg-black py-2 w-[200px]"
               >
                 BUY QUBIC
               </a>
@@ -70,7 +70,7 @@ export default function Home() {
                   </div>
                 </div>
               </div> */}
-              <Image src="/image/homepage_image.png" width={600} height={600} alt="bnb" />
+              <Image src="/image/homepage_image.png" width={700} height={700} alt="bnb" />
             </div>
           </div>
         </div>

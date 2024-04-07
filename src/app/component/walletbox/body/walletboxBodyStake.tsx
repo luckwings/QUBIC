@@ -32,7 +32,7 @@ export default function WalletboxBodyStake() {
         </div>
       </div>
 
-      <div className="flex justify-between w-[90%] ml-[5%]">
+      <div className="flex justify-between w-[95%] ml-[5%]">
         <div className="px-4">1</div>
         <RangeSlider min={0} max={100} initial={percent} type="percent" page={"stake"} />
         <div className="px-4">100%</div>
@@ -48,7 +48,7 @@ export default function WalletboxBodyStake() {
         </div>
       </div>
       
-      <div className="flex justify-between w-[90%] ml-[5%]">
+      <div className="flex justify-between w-[95%] ml-[5%]">
         <div className="px-4">3</div>
         <RangeSlider min={2} max={365} initial={dayRange} type="time" page={"stake"} />
         <div className="px-4">365</div>

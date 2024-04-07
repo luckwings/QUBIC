@@ -6,7 +6,7 @@ import MobileButton from "../component/layout/mobileButton";
 
 export default function About() {
   return (
-    <div className="h-screen relative text-[16px]">
+    <div className="h-screen relative">
       <Header />
       <main className="flex items-center bg-[#13161e] h-screen relative w-full">
         <div className="m-auto w-full">
